@@ -1,0 +1,71 @@
+.c-tab{
+    font-family: 'RobotoBold';
+    font-size: 25px;
+    color: #444444;
+    border-bottom: 3px solid #D3D3D3;
+    cursor: pointer;
+}
+
+.c-tab.active{
+    border-bottom: 3px solid #DA291C;
+}
+
+.c-field{
+    border-radius: 50px;
+    line-height: 1;
+}
+
+.c-label{
+    color: #B4B4B4;
+    font-family: 'Roboto';
+    font-size: 15px;
+}
+
+.c-value{
+    color: #959595;
+    font-family: 'Roboto';
+    font-size: 20px;
+}
+
+.c-edit{
+    background-color: #0097A9;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.c-pin-seguridad{
+    border-radius: 40px;
+}
+
+.c-field-input{
+    border-radius: 50px;
+    line-height: 1;
+    outline: none;
+    border:none;
+}
+
+.c-input-button-pin{
+    top: -25px;
+    width: 85%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.c-input{
+    width: 65%;
+}
+
+.c-button{
+    width: 35%;
+}
+
+.c-card-pin p{
+    font-family: 'Roboto';
+    font-size: 16px;
+}
+
+.c-card-pin a{
+    font-family: 'Roboto';
+    color: #0097A9;
+}

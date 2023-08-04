@@ -1,0 +1,32 @@
+.c-image{
+    position: absolute;
+    top: -50px;
+    right: 40px;
+}
+
+.c-inicio p{
+    font-size: 25px;
+    line-height: 1;
+}
+
+.c-title-inicio{
+    color: #444444;
+    font-family: 'Roboto';
+}
+
+.container-card{
+    background-color: white;
+    border-radius: 40px;
+    line-height: 1;
+    box-shadow: 0px 4px 50px rgba(217, 217, 217, 0.25);
+}
+
+.container-card p{
+    font-size: 25px;
+    font-family: 'RobotoBold';
+}
+
+.container-card span{
+    font-size: 20px;
+    font-family: 'Roboto';
+}

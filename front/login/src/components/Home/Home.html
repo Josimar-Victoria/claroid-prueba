@@ -1,0 +1,135 @@
+<section class="container-view bg-gris-2">
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-2 p-0 menuBorderRadius">
+                <div class="d-flex flex-column justify-content-between h-100 container-menu">
+                    <div class="container-section-navigate">
+                        <div class="container-logo text-center mt-5">
+                            <img src="@/assets/logo-small-claroid.svg" class="img-fluid" alt="">
+                        </div>
+                        <div class="container-navigate me-4 mt-4">
+                            <router-link to="/home/inicio">
+                                <div class="container-router position-relative my-1">
+                                    <div class="c-line"></div>
+                                    <div class="d-flex flex-row justify-content-start align-items-center p-4 container-link">
+                                        <div class="c-icon">
+                                            <img src="@/assets/home.svg" class="img-fluid" alt="">
+                                        </div>
+                                        <div class="c-text ms-3">
+                                            <span>Inicio</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </router-link>
+                            <router-link to="/home/perfil">
+                                <div class="container-router position-relative my-1">
+                                    <div class="c-line"></div>
+                                    <div class="d-flex flex-row justify-content-start align-items-center p-4 container-link">
+                                        <div class="c-icon">
+                                            <img src="@/assets/user.svg" class="img-fluid" alt="">
+                                        </div>
+                                        <div class="c-text ms-3">
+                                            <span>Mi perfil</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </router-link>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center py-4 mx-4 container-logout">
+                        <div>
+                            <img src="@/assets/logout.svg" class="img-fluid" alt="">
+                        </div>
+                        <div class="ms-2">
+                            <span class="close-session fs-20 color-gris-1 fw-bolder">
+                                Cerrar sesión
+                            </span>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-10 p-0 c-right-router">
+                <div class="d-flex flex-column justify-content-between h-100 container-menu">
+                    <div class="c-header">
+                        <div class="d-flex flex-row justify-content-end align-items-center p-5">
+                            <div class="me-5 position-relative">
+                                <img src="@/assets/notificacion.svg" class="img-fluid" alt="">
+                                <span class="ms-2 c-show-notification" @click="showNotification = !showNotification">Notificaciones</span>
+
+                                <div :class="[showNotification ? 'd-flex' : 'd-none']" class="d-flex flex-column c-notificaciones">
+                                    <div class="title-notificaciones py-3 px-4">
+                                        Notificaciones
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-start align-items-center c-list-notificaciones h-100">
+                                        <div class="text-center mt-4 not-notificaciones pb-5 d-none">
+                                            <img src="@/assets/not-notification.svg" class="img-fluid" alt="">   
+                                        </div>
+                                        <div class="list-notificaciones px-4 py-2">
+                                            <div class="c-notification">
+                                                <div class="d-flex flex-row align-items-center p-3">
+                                                    <div class="c-people-notification">
+                                                        <div class="d-flex  justify-content-center align-items-center position-relative people-notification">
+                                                            <div class="d-flex justify-content-center align-items-center position-absolute c-last-notification">
+                                                                <div class="c-last-notification-sub">
+                                    
+                                                                </div>
+                                                            </div>
+                                                            CR
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-desc-notification"><span class="desc-notification">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
+                                                    <div class="c-time-notification text-center"><span class="time-notification">2 min</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="c-notification">
+                                                <div class="d-flex flex-row align-items-center p-3">
+                                                    <div class="c-people-notification">
+                                                        <div class="d-flex  justify-content-center align-items-center people-notification">
+                                                            LR
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-desc-notification"><span class="desc-notification">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
+                                                    <div class="c-time-notification text-center"><span class="time-notification">4 hrs</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="c-notification">
+                                                <div class="d-flex flex-row align-items-center p-3">
+                                                    <div class="c-people-notification">
+                                                        <div class="d-flex  justify-content-center align-items-center people-notification">
+                                                            AB
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-desc-notification"><span class="desc-notification">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
+                                                    <div class="c-time-notification text-center"><span class="time-notification">Vie 10/03</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-end align-items-center c-all-notification p-3">
+                                                <router-link to="/home/notificaciones" @click="showNotification = !showNotification"><span>Ver todo</span></router-link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-router h-100">
+                        <RouterView />
+                    </div>
+                    <div class="c-footer">
+                        <div class="d-flex flex-row justify-content-center align-items-center container-footer p-4 bg-gris-1">
+                            <img
+                              class="logo-footer"
+                              src="@/assets/logo-footer-small.svg"
+                              alt="logo-claro"
+                            />
+                            <span class="color-gris fs-20 mt-1 ms-3"
+                              >Todos los derechos reservados. Claro 2023</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

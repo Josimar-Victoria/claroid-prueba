@@ -1,0 +1,114 @@
+.c-notificaciones{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 400px;
+    background-color: white;
+    z-index: 1;
+    border-radius: 20px;
+    box-shadow: 0px 4px 50px rgba(217, 217, 217, 0.25);
+}
+
+.c-notification{
+    border-bottom: 1px solid #E3E3E3;
+}
+
+.title-notificaciones{
+    font-size: 20px;
+    font-family: 'RobotoBold';
+    border-bottom: 1px solid #E3E3E3;
+}
+
+.desc-notification{
+    font-size: 15px;
+    color: #575757;
+}
+
+.time-notification{
+    font-size: 15px;
+    color: #878787;
+}
+
+.people-notification{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #B52217;
+    color: white;
+    font-family: 'RobotoBold';
+}
+
+.c-people-notification{
+    width: 15%;
+}
+
+.c-people-notification.general{
+    width: 5%;
+}
+
+.c-desc-notification.general{
+    width: 85%;
+    line-height: 1;
+}
+
+.c-desc-notification{
+    width: 65%;
+    line-height: 1;
+}
+
+.c-time-notification.general{
+    width: 10%;
+}
+
+.c-time-notification{
+    width: 20%;
+}
+
+.c-all-notification span{
+    font-size: 17px;
+    color: #0097A9;
+    text-decoration: underline;
+    font-family: 'Roboto';
+}
+
+.c-show-notification{
+    cursor: pointer;
+    color: #B4B4B4;
+    font-family: 'RobotoBold';
+}
+
+.c-title-inicio{
+    color: #444444;
+    font-family: 'Roboto';
+}
+
+.border-bottom-gray{
+    border-bottom: 1px solid #E3E3E3;
+}
+
+.c-last-notification{
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    top: -5px;
+    right: -5px;  
+    border-radius: 50%;
+}
+
+.c-last-notification-sub{
+    border-radius: 50%;
+    background-color: #DE2121;
+    width: 14px;
+    height: 14px;
+}
+
+.separate-notification{
+    width: 1px;
+    height: 60px;
+    background-color: rgba(180, 180, 180, 0.5);
+}
+
+
+.c-notification:nth-of-type(odd) .people-notification {
+    background: #0097A9;
+}

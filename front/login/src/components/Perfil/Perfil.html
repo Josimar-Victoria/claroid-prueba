@@ -1,0 +1,123 @@
+<div class="container-fluid px-5 h-100">
+    <div class="w-100 container-tabs h-100">
+        <div class="c-tabs h-100">
+            <div class="w-100 border-bottom-gray">
+                <h3><img src="@/assets/userGray.svg" class="img-fluid" alt=""> Mi Perfil</h3>
+                <p>Edita tu información personal en cualquier momento.</p>
+            </div>
+            <div class="d-flex justify-content-center align-items-center w-100">
+                <div class="w-50 c-tab p-3" :class="tabRender == 1 ? 'active' : ''" @click="tabRender = 1">
+                    Datos básicos
+                </div>
+                <div class="w-50 c-tab p-3" :class="tabRender == 2 ? 'active' : ''" @click="tabRender = 2">
+                    Seguridad
+                </div>
+            </div>
+            <div class="c-tab-1 w-75 " v-if="tabRender == 1">
+                
+                <div class="c-content-tab w-100 py-4">
+                    <div class="container-fluid">
+                        <div class="w-100 px-2 mb-4">
+                            <p class="f-bold color-black-1">Identificación</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="c-field bg-gris-3 px-5 py-3">
+                                    <p class="c-label m-0">Tipo de documento</p>
+                                    <p class="c-value m-0">Cédula</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="c-field bg-gris-3 px-5 py-3">
+                                    <p class="c-label m-0">Número de documento</p>
+                                    <p class="c-value m-0">9999999999</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-6">
+                                <div class="c-field bg-gris-3 px-5 py-3">
+                                    <p class="c-label m-0">Fecha de expedición</p>
+                                    <p class="c-value m-0">01/01/2001</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-100 px-2 mt-5 mb-4">
+                            <p class="f-bold color-black-1">Datos de contacto</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="c-field bg-gris-3 px-5 py-3">
+                                    <p class="c-label m-0">Nombres y apellidos</p>
+                                    <p class="c-value m-0">Carlos Emilio Perez Rodriguez</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="c-field bg-gris-3 px-5 py-3">
+                                    <p class="c-label m-0">Fecha de nacimiento</p>
+                                    <p class="c-value m-0">01/01/2001</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-6 d-flex justify-content-center align-items-center">
+                                <div class="c-field bg-white w-100 px-5 py-3">
+                                    <p class="c-label m-0">Correo electrónico</p>
+                                    <p class="c-value m-0">ejemplo@dominio.com</p>
+                                </div>
+                                <div class="d-flex justify-content-center align-items-center c-edit">
+                                    <img src="@/assets/edit.svg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="col-6 d-flex justify-content-center align-items-center">
+                                <div class="c-field bg-white w-100 px-5 py-3">
+                                    <p class="c-label m-0">Número de celular</p>
+                                    <p class="c-value m-0">9999999999</p>
+                                </div>
+                                <div class="d-flex justify-content-center align-items-center c-edit">
+                                    <img src="@/assets/edit.svg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center h-100 c-tab-2" v-if="tabRender == 2">
+                <div class="w-100 text-center">
+                    <h2 class="color-black-1">PIN de seguridad</h2>
+                    <p class="fs-25">Para realizar la acción debes ingresar tu PIN de seguridad.</p>
+                </div>
+                <div class="container mt-5">
+                    <div class="row">
+                        <div class="col-8 offset-2">
+                            <div class="position-relative p-5 w-100 c-pin-seguridad bg-gris-1">
+                                <div class="d-flex justify-content-center align-items-center c-input-button-pin position-absolute">
+                                    <div class="c-input">
+                                        <input type="password" class="c-field-input w-100 px-4 py-3" placeholder="PIN de seguridad" name="" id="">
+                                    </div>
+                                    <div class="c-button ms-3">
+                                        <button type="button" class="btn btn-red f-bold px-3 py-3 w-100">Continuar</button>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center align-items-start c-card-pin">
+                                    <div class="me-3 mt-3">
+                                        <img src="@/assets/question.svg" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="w-100">
+                                        <p class="color-black-2">
+                                            El PIN de seguridad que se te está solicitando es el mismo que digitaste durante el formulario de registro. Este número es esencial para proteger tus datos y garantizar que solo tú tengas el control de tu cuenta.
+                                        </p>
+                                        <p class="color-black-2">
+                                            Si tienes problemas para recordar tu PIN, llena el <a href="registro/validar"
+                                            >formulario de soporte</a>  y te ayudaremos a restablecerlo.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
